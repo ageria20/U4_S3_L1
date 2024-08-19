@@ -24,3 +24,7 @@ ES6
 
 SELECT invoices.invoice_number, invoices.amount, invoices.vat, invoices.date, suppliers.denomination  FROM invoices
 JOIN suppliers ON invoices.supplier_id = suppliers.supplier_id
+
+ES7
+SELECT invoices.date, count(*) FROM invoices WHERE vat = 20 
+GROUP BY date
