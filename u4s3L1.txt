@@ -31,3 +31,9 @@ GROUP BY date
 
 ES8
 SELECT EXTRACT(YEAR FROM date), count(invoice_number),  SUM(amount) FROM invoices GROUP BY EXTRACT(YEAR FROM date)
+
+eS9 EXTRA
+
+SELECT EXTRACT(YEAR FROM date), count(typology) FROM invoices WHERE typology = 'A'
+GROUP BY EXTRACT(YEAR FROM date)
+HAVING count(typology) > 1
